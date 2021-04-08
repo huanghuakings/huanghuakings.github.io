@@ -30,5 +30,3 @@
 
 - [x] Github 图床
 - [x] fontawesome
-
-![](https://cdn.jsdelivr.net/gh/laoxuai/images/image/1588860848951.png)
