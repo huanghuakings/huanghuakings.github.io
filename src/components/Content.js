@@ -3,6 +3,37 @@ import { CardBox, Button, Box, Tooltip } from "./styled";
 import SlideImg from "../images/log002.jpg";
 import RightImg from "../images/right_01.png";
 import LeftImg from "../images/left_01.png";
+import { Carousel } from "element-react";
+
+import "element-theme-default";
+
+export const CarouselBox = () => {
+  return (
+    <div className="demo-3 medium" style={{ marginTop: "92px" }}>
+      <Carousel interval="5000" arrow="always" height="465px">
+        {[1, 2, 3, 4].map((item, index) => {
+          return (
+            <Carousel.Item key={index}>
+              <li style={{ width: "2543px" }}>
+                <a
+                  target="_blank"
+                  rel="noreferrer"
+                  href="https://campus.alibaba.com/positionList.htm"
+                >
+                  <img
+                    src={SlideImg}
+                    style={{ width: "2543px" }}
+                    alt="{item}"
+                  />
+                </a>
+              </li>
+            </Carousel.Item>
+          );
+        })}
+      </Carousel>
+    </div>
+  );
+};
 
 export const Card = (props) => {
   const { style, url, value, isShowTips } = props;
@@ -43,33 +74,17 @@ export const Banner = () => {
         className="bannerUl"
         style={{ width: "7629px", marginLeft: "-2543px", height: "100%" }}
       >
-        <li style={{ width: "2543px" }}>
-          <a
-            target="_blank"
-            rel="noreferrer"
-            href="https://campus.alibaba.com/positionList.htm"
-          >
-            <img src={SlideImg} style={{ width: "2543px" }} />
-          </a>
-        </li>
-        <li style={{ width: "2543px" }}>
-          <a
-            target="_blank"
-            rel="noreferrer"
-            href="https://campus.alibaba.com/positionList.htm"
-          >
-            <img src={SlideImg} style={{ width: "2543px" }} />
-          </a>
-        </li>
-        <li style={{ width: "2543px", height: "100%" }}>
-          <a
-            target="_blank"
-            rel="noreferrer"
-            href="https://campus.alibaba.com/positionList.htm"
-          >
-            <img src={SlideImg} style={{ width: "2543px" }} />
-          </a>
-        </li>
+        {[1, 2, 3, 4].map((val) => (
+          <li style={{ width: "2543px" }}>
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://campus.alibaba.com/positionList.htm"
+            >
+              <img src={SlideImg} style={{ width: "2543px" }} alt={val} />
+            </a>
+          </li>
+        ))}
       </ul>
       <ul className="blockClick" style={{ width: "35px", marginTop: "451px" }}>
         <li
@@ -114,7 +129,8 @@ export default function Content() {
   return (
     <>
       <div style={{ height: "550px" }}>
-        <Banner />
+        {/* <Banner /> */}
+        <CarouselBox />
       </div>
       <Box>
         <Card {...parmhasTitle} />

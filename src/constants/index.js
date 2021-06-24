@@ -58,7 +58,7 @@ export const footerList = [
 
 export const headerList = [
   {
-    href: "https://campus.alibaba.com/index.htm",
+    href: "home",
     style: { padding: "0 21.5px", color: "#fa7b0e" },
     name: "首页",
     item: [
