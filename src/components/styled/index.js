@@ -34,24 +34,30 @@ export const Tooltip = styled.span`
   position: absolute;
   z-index: 1;
   bottom: 120%;
-  left: 50%;
-  margin-left: -60px;
+  left: 33%;
+  margin-left: -50px;
   &::after {
     content: "";
     position: absolute;
-    top: 100%;
-    left: 50%;
+    top: 83%;
+    left: 30%;
+    width: 5px;
+    height: 5px;
     margin-left: -5px;
     border-width: 5px;
     border-style: solid;
-    border-color: rgb(155, 155, 155) transparent transparent transparent;
+    transform: rotate(45deg);
+    background-color: white;
+    border-color: white transparent transparent transparent;
+    border-right: 1px solid #dadada;
+    border-bottom: 1px solid #dadada;
+
     /* border-color: transparent transparent #fff transparent; */
   }
 `;
 export const Button = styled.p`
   position: relative;
   display: inline-block;
-  border-bottom: 1px dotted black;
   width: 173px;
   height: 40px;
   line-height: 40px;

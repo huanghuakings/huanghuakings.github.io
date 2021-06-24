@@ -1,5 +1,6 @@
 import React from "react";
 import Top from "./Top";
+import { Link } from "react-router-dom";
 
 export const Items = (props) => {
   const { listItem } = props;
@@ -21,9 +22,9 @@ export const HeaderItem = (props) => {
     <ul className="nav" id="J-nav">
       {headerList?.map((val, index) => (
         <li key={index} style={{ overflow: "hidden" }}>
-          <a href={val.href} style={val.style}>
+          <Link to={val.href} style={val.style}>
             {val.name}
-          </a>
+          </Link>
           <Items listItem={val.item} />
         </li>
       ))}
